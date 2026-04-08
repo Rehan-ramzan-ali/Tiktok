@@ -9,9 +9,9 @@ import 'swiper/css/pagination';
 const TikTokShopCard = () => {
   // Array of slides to keep the code clean
   const slides = [
-    { id: 1, img: "public/93a7074bb6c3d3653a546d9fa8e67443.png" },
-    { id: 2, img: "public/e8080796e7e53c514a4de58a1ca48945.png" },
-    { id: 3, img: "public/8d410792ddcd0d1aed679689aca55012.png" },
+    { id: 1, img: "/93a7074bb6c3d3653a546d9fa8e67443.png" },
+    { id: 2, img: "/e8080796e7e53c514a4de58a1ca48945.png" },
+    { id: 3, img: "/8d410792ddcd0d1aed679689aca55012.png" },
   ];
 
   return (

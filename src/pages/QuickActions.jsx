@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'; // Link import karein
 
 const QuickActions = () => {
   const actions = [
-    { id: 1, name: "Recharge", icon: "public/cz-Dfti-XTA.png", path: "/recharge" }, 
-    { id: 2, name: "Withdrawal", icon: "public/download.png", path: "/withdrawal" },
-    { id: 3, name: "Upgrade VIP", icon: "public/店铺直通车-CbZvC6oJ.png", path: "/upgrade-vip" },
-    { id: 4, name: "Merchant Service", icon: "public/创业联盟-Dg77AuCp.png", path: "/merchant-service" },
-    { id: 5, name: "Shop Settings", icon: "public/店铺设置-BQV9rnKD.png", path: "/shop-settings" },
-    { id: 6, name: "Sign In", icon: "public/download (1).png", path: "/signin" },
+    { id: 1, name: "Recharge", icon: "/cz-Dfti-XTA.png", path: "/recharge" }, 
+    { id: 2, name: "Withdrawal", icon: "/download.png", path: "/withdrawal" },
+    { id: 3, name: "Upgrade VIP", icon: "/店铺直通车-CbZvC6oJ.png", path: "/upgrade-vip" },
+    { id: 4, name: "Merchant Service", icon: "/创业联盟-Dg77AuCp.png", path: "/merchant-service" },
+    { id: 5, name: "Shop Settings", icon: "/店铺设置-BQV9rnKD.png", path: "/shop-settings" },
+    { id: 6, name: "Sign In", icon: "/download (1).png", path: "/signin" },
   ];
 
   return (
