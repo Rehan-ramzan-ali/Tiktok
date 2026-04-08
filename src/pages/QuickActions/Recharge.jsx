@@ -28,7 +28,7 @@ const Recharge = () => {
       {/* Hero Image Section */}
       <div className="flex justify-center py-10">
         <img 
-          src="public/yan-CVtHdt_Q.png" // Apni image ka path yahan dein
+          src="/yan-CVtHdt_Q.png" // Apni image ka path yahan dein
           alt="Recharge Illustration" 
           className="w-72 h-90 "
         />
@@ -42,7 +42,7 @@ const Recharge = () => {
           {/* USDT Option */}
           <div className="flex items-center justify-between p-4 bg-white border border-gray-100 rounded-lg shadow-sm hover:bg-gray-50 cursor-pointer transition-all">
             <div className="flex items-center gap-3">
-              <img src="public/usdt-BcR5vjQE.png" alt="" className='w-7' />
+              <img src="/usdt-BcR5vjQE.png" alt="" className='w-7' />
               <span className="font-semibold text-gray-800">USDT</span>
             </div>
             <ChevronRight size={20} className="text-gray-400" />

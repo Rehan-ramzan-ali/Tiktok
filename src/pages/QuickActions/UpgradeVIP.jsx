@@ -17,10 +17,10 @@ const UpgradeVIP = () => {
   const [pin, setPin] = useState('');
 
   const vipPlans = [
-    { id: 10, name: 'V10', capital: '500000.00', visits: 0, profit: '48.00%', img: 'public/eb50e027171abab2fd2a3f9dd010fb29.png' },
-    { id: 9, name: 'V9', capital: '300000.00', visits: 0, profit: '42.00%', img: 'public/59efe92da854b8cd6d40bedfb00230b7.png' },
-    { id: 8, name: 'V8', capital: '150000.00', visits: 0, profit: '38.00%', img: 'public/dc3e5cb5f53091298a10803b1d19ec76.png' },
-    { id: 7, name: 'V7', capital: '100000.00', visits: 0, profit: '35.00%', img: 'public/5368067b74835832fdd79e9daf9d38e6.png' },
+    { id: 10, name: 'V10', capital: '500000.00', visits: 0, profit: '48.00%', img: '/eb50e027171abab2fd2a3f9dd010fb29.png' },
+    { id: 9, name: 'V9', capital: '300000.00', visits: 0, profit: '42.00%', img: '/59efe92da854b8cd6d40bedfb00230b7.png' },
+    { id: 8, name: 'V8', capital: '150000.00', visits: 0, profit: '38.00%', img: '/dc3e5cb5f53091298a10803b1d19ec76.png' },
+    { id: 7, name: 'V7', capital: '100000.00', visits: 0, profit: '35.00%', img: '/5368067b74835832fdd79e9daf9d38e6.png' },
   ];
 
   const handlePinClick = (num) => {
