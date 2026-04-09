@@ -17,6 +17,12 @@ import UpgradeVIP from './pages/QuickActions/UpgradeVIP'
 import ShopSettings from './pages/QuickActions/ShopSettings'
 import SignInPage from './pages/QuickActions/SignInPage'
 import MessageCenter from './pages/MessageCenter'
+import Product from './pages/Product'
+import Distribution from './pages/Distribution'
+import ProductManagement from './pages/ProductManagement'
+import Order from './pages/Order'
+import EvaluationCenter from './pages/EvaluationCenter'
+import Mypages from './pages/Profile'
 
 const App = () => {
   return (
@@ -51,6 +57,15 @@ const App = () => {
           <Route path="/message" element={<MessageCenter />} />
           
          
+
+          <Route path="/product" element={<Product />} />
+          <Route path="/distribution" element={<Distribution />} />
+          <Route path="/goods" element={<ProductManagement />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/comment" element={<EvaluationCenter />} />
+          <Route path="/profile" element={<Mypages />} />
+
+
         </Routes>
       </div>
     
