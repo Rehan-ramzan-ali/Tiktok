@@ -26,14 +26,14 @@ const Navbar = () => {
       name: "Order", 
       path: "/order", 
       whiteImg: "/订单-LRGkNMUQ.png", 
-      redImg: "public/订单-BPYhVUj0.png",
+      redImg: "/订单-BPYhVUj0.png",
       badge: 2 
     },
     { 
       name: "My", 
       path: "/profile", 
       whiteImg: "/我的-CVMXnsKi.png", 
-      redImg: "public/download (6).png" 
+      redImg: "/download (6).png" 
     },
   ];
 
