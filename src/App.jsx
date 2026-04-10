@@ -24,6 +24,10 @@ import Order from './pages/Order'
 import EvaluationCenter from './pages/EvaluationCenter'
 import Mypages from './pages/Profile'
 import ProductID from './pages/ProductID'
+import Setting from './pages/Setting'
+import Baseinfo from './pages/Baseinfo'
+import UploadBanner from './pages/UploadBanner'
+
 
 const App = () => {
   return (
@@ -65,6 +69,9 @@ const App = () => {
           <Route path="/order" element={<Order />} />
           <Route path="/comment" element={<EvaluationCenter />} />
           <Route path="/profile" element={<Mypages />} />
+          <Route path="/settings" element={<Setting />} />
+          <Route path="/baseinfo" element={<Baseinfo   />} />
+          <Route path="/uploadBanner" element={<UploadBanner   />} />
 
           {/* Product ID ke liye dynamic route */}
           <Route path="/product/:id" element={<ProductID />} />
