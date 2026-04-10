@@ -12,7 +12,6 @@ const DistributionCenter = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Categories fetch karna
     axios.get('https://dummyjson.com/products/categories')
       .then(res => setCategories(res.data));
   }, []);
@@ -29,24 +28,33 @@ const DistributionCenter = () => {
     });
   }, [selectedCategory]);
 
+  // Product par click karne ka function
+  const handleProductClick = (product) => {
+    // Hum product ka pura object 'state' mein bhej rahe hain
+    navigate(`/product/${product.id}`, { state: { product } });
+  };
+
   const filteredProducts = products.filter(p => 
     p.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="max-w-xl mx-auto bg-[#F7F8FA] min-h-screen font-sans pb-20">
-      {/* Black Header */}
-    
- <h1 className='text-[15px] font-bold p-3'>Best Selling ProductsTOP10</h1>
+      {/* Header Section as per image_9dad83.png */}
 
-      {/* Product List (Image UI Style) */}
+
+      <h1 className='text-[15px] font-bold p-3'>Best Selling Products <span className="text-[10px] bg-black text-white px-1.5 py-0.5 rounded ml-1">TOP10</span></h1>
+
       <div className="p-3 space-y-3">
         {loading ? (
           <div className="text-center py-10 text-gray-400">Loading...</div>
         ) : (
           filteredProducts.map((product) => (
-            <div key={product.id} className="bg-white rounded-lg p-3 shadow-sm flex gap-4 border border-gray-50">
-              
+            <div 
+              key={product.id} 
+              onClick={() => handleProductClick(product)} // Click event added
+              className="bg-white rounded-lg p-3 shadow-sm flex gap-4 border border-gray-50 cursor-pointer active:scale-[0.98] transition-transform"
+            >
               {/* Product Image */}
               <div className="w-24 h-24 flex-shrink-0 bg-gray-50 rounded-md overflow-hidden">
                 <img src={product.thumbnail} alt="" className="w-full h-full object-contain" />
@@ -58,19 +66,16 @@ const DistributionCenter = () => {
                   {product.title}
                 </h2>
                 
-                <div className="mt-2 flex justify-between items-center">
-                   <p className="text-[11px] text-gray-500">
-                     Selling Price <span className="text-rose-500 font-bold ml-1">${product.price}</span>
-                   </p>
-                   <p className="text-[11px] text-gray-500">
-                     Profit <span className="text-gray-900 font-bold ml-1">${(product.price * 0.15).toFixed(2)}</span>
-                   </p>
+                <div className="mt-2 flex justify-between items-center text-[11px] text-gray-500 font-medium">
+                   <span>Click: <span className="text-gray-900">{Math.floor(Math.random() * 100)}</span></span>
+                   <span>Sales: <span className="text-gray-900">{product.stock}</span></span>
                 </div>
 
-                <div className="flex justify-end mt-3">
-                   <button className="bg-black text-white px-6 py-2 rounded-md text-[11px] font-bold uppercase tracking-wider active:scale-95 transition-all">
-                      Distribution
-                   </button>
+                <div className="mt-2 flex justify-between items-center">
+                   <p className="text-[11px] text-gray-500 font-bold">
+                     Price: <span className="text-gray-900 ml-1">${product.price}</span>
+                   </p>
+                
                 </div>
               </div>
             </div>
@@ -78,12 +83,9 @@ const DistributionCenter = () => {
         )}
       </div>
 
-      {/* No More Content */}
       <div className="text-center py-6 text-gray-400 text-[10px] uppercase tracking-widest">
         — No More —
       </div>
-
-      <style>{`.no-scrollbar::-webkit-scrollbar { display: none; }`}</style>
     </div>
   );
 };

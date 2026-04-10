@@ -23,6 +23,7 @@ import ProductManagement from './pages/ProductManagement'
 import Order from './pages/Order'
 import EvaluationCenter from './pages/EvaluationCenter'
 import Mypages from './pages/Profile'
+import ProductID from './pages/ProductID'
 
 const App = () => {
   return (
@@ -64,6 +65,9 @@ const App = () => {
           <Route path="/order" element={<Order />} />
           <Route path="/comment" element={<EvaluationCenter />} />
           <Route path="/profile" element={<Mypages />} />
+
+          {/* Product ID ke liye dynamic route */}
+          <Route path="/product/:id" element={<ProductID />} />
 
 
         </Routes>
