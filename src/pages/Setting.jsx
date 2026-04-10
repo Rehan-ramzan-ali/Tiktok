@@ -11,7 +11,7 @@ const Settings = () => {
 
   // --- VIEW 1: Main Settings Menu ---
     return (
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center font-sans">
+      <div className="min-h-screen  bg-gray-100 flex flex-col items-center font-sans">
         {/* Width increased to 750px for a more spacious look */}
         <div className="w-full max-w-xl mt-14 bg-black text-white px-4 py-3 flex items-center justify-between shadow-sm">
        <a href="/product">   <button className="flex items-center text-sm font-medium hover:opacity-80 transition-opacity">
